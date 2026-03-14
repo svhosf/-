@@ -10,7 +10,7 @@ $consolePtr = [Console.Window]::GetConsoleWindow()
 $isAdmin = ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")
 
 if (-not $isAdmin) {
-    # ЕСЛИ НЕ АДМИН - ПЕРЕЗАПУСКАЕМ СЕБЯ ОТ АДМИНА
+    
     $scriptPath = $MyInvocation.MyCommand.Path
     if (-not $scriptPath) { $scriptPath = "minecraft.ps1" }
     
